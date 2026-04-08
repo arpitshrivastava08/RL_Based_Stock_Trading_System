@@ -353,3 +353,23 @@ Next steps:
 2026-04-08 17:49:09 | INFO     | env                       | StockTradingEnv initialized | Steps: 4310 | Initial balance: 10000 | State dim: 13
 2026-04-08 17:49:09 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 240.1%
 2026-04-08 17:49:10 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 24010.60 | Confidence: 66.67% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-04-08 17:50:11 | INFO     | data_loader               | Loading ^NSEI from cache (0.05h old)
+2026-04-08 17:50:11 | INFO     | features                  | Computing technical indicators...
+2026-04-08 17:50:11 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14741, 16)
+2026-04-08 17:50:18 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-04-08 17:50:18 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-04-08 17:50:18 | INFO     | data_loader               | Saved ^NSEI data: 4329 rows -> data/IDX_NSEI_60d_5m.csv
+2026-04-08 17:50:18 | INFO     | features                  | Computing technical indicators...
+2026-04-08 17:50:18 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4310, 16)
+2026-04-08 17:50:18 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-04-08 17:50:18 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-04-08 17:50:18 | INFO     | env                       | StockTradingEnv initialized | Steps: 4310 | Initial balance: 10000 | State dim: 13
+2026-04-08 17:50:18 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 240.1%
+2026-04-08 17:50:18 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 24010.60 | Confidence: 66.67% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-04-08 17:50:18 | INFO     | features                  | Computing technical indicators...
+2026-04-08 17:50:18 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4310, 16)
+2026-04-08 17:50:18 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-04-08 17:50:18 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-04-08 17:50:18 | INFO     | env                       | StockTradingEnv initialized | Steps: 4310 | Initial balance: 10000 | State dim: 13
+2026-04-08 17:50:18 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 240.1%
+2026-04-08 17:50:18 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 24010.60 | Confidence: 66.67% | Sentiment: +0.000 | Risk: POSITION_CAP
