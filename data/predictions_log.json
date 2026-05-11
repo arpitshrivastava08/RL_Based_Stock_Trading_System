@@ -374,5 +374,55 @@
       0.0
     ],
     "n_bars": 4310
+  },
+  {
+    "timestamp": "2026-05-11T18:11:08.313503",
+    "ticker": "^NSEI",
+    "current_price": 23820.349609375,
+    "final_action": 0,
+    "action_name": "HOLD",
+    "confidence": 0.5,
+    "sentiment_score": 0.0,
+    "risk_signal": "POSITION_CAP",
+    "risk_reason": "Position limit exceeded: 238.2%",
+    "agent_votes": {
+      "ppo": {
+        "action_name": "BUY",
+        "weight": 0.25
+      },
+      "a2c": {
+        "action_name": "BUY",
+        "weight": 0.25
+      },
+      "dqn": {
+        "action_name": "SELL",
+        "weight": 0.25
+      },
+      "ddqn": {
+        "action_name": "HOLD",
+        "weight": 0.25
+      }
+    },
+    "vote_scores": {
+      "HOLD": 0.25,
+      "BUY": 0.5,
+      "SELL": 0.25
+    },
+    "obs": [
+      -0.406924843788147,
+      -1.3184711933135986,
+      -0.7834705114364624,
+      -0.5326675176620483,
+      -0.9816612601280212,
+      -0.37617987394332886,
+      -0.3425332009792328,
+      -0.29975631833076477,
+      -0.32969751954078674,
+      -0.35527512431144714,
+      0.36435529589653015,
+      -0.6159278154373169,
+      0.0
+    ],
+    "n_bars": 4336
   }
 ]
