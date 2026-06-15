@@ -69,11 +69,7 @@ class EnsembleEngine:
 
             try:
                 action, _ = model.predict(obs, deterministic=deterministic)
-<<<<<<< HEAD
-                action = int(action)
-=======
                 action = int(np.asarray(action).flatten()[0])
->>>>>>> master
                 action = max(HOLD, min(SELL, action))
 
                 agent_actions[name] = {

@@ -296,12 +296,8 @@ class PrioritizedReplayBuffer:
         def __init__(self, capacity: int):
             self.capacity  = capacity
             self.tree      = np.zeros(2 * capacity - 1, dtype=np.float32)
-<<<<<<< HEAD
-            self.data      = np.zeros(capacity, dtype=object)
-=======
             self.data      = np.empty(capacity, dtype=object)
             self.data.fill(None)
->>>>>>> master
             self.write     = 0
             self.n_entries = 0
 
@@ -376,12 +372,9 @@ class PrioritizedReplayBuffer:
         Sample batch_size transitions proportional to priority.
         Returns transitions + indices (for priority updates) + IS weights.
         """
-<<<<<<< HEAD
-=======
         if self.tree.n_entries < batch_size:
             batch_size = self.tree.n_entries
 
->>>>>>> master
         batch      = []
         indices    = []
         priorities = []
@@ -390,21 +383,6 @@ class PrioritizedReplayBuffer:
         self.frame += 1
 
         for i in range(batch_size):
-<<<<<<< HEAD
-            lo = segment * i
-            hi = segment * (i + 1)
-            s  = random.uniform(lo, hi)
-            idx, priority, data = self.tree.get(s)
-            batch.append(data)
-            indices.append(idx)
-            priorities.append(priority)
-
-        # Compute importance sampling weights
-        total    = self.tree.total()
-        probs    = np.array(priorities, dtype=np.float32) / (total + 1e-8)
-        weights  = (self.tree.n_entries * probs) ** (-self.beta)
-        weights /= weights.max()   # normalize so max weight = 1
-=======
             for _ in range(8):
                 lo = segment * i
                 hi = segment * (i + 1)
@@ -430,7 +408,6 @@ class PrioritizedReplayBuffer:
         )
         weights  = (self.tree.n_entries * probs) ** (-self.beta)
         weights /= (weights.max() + 1e-8)
->>>>>>> master
 
         states      = np.array([t.state      for t in batch], dtype=np.float32)
         actions     = np.array([t.action     for t in batch], dtype=np.int64)

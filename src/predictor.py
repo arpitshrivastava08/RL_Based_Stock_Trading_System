@@ -175,11 +175,7 @@ class LivePredictor:
             self._save_history()
 
             logger.info(
-<<<<<<< HEAD
-                f"[{ticker}] PREDICTION → {result.action_name} | "
-=======
                 f"[{ticker}] PREDICTION -> {result.action_name} | "
->>>>>>> master
                 f"Price: {current_price:.2f} | "
                 f"Confidence: {confidence:.2%} | "
                 f"Sentiment: {sentiment_score:+.3f} | "
@@ -199,21 +195,6 @@ class LivePredictor:
         return temp_env._get_obs()
 
     def _simulate_action(self, action: int, price: float):
-<<<<<<< HEAD
-        if action == BUY and self._cash_balance >= price:
-            cost = price * (1 + config.env.transaction_cost)
-            if self._cash_balance >= cost:
-                self._shares_held += 1
-                self._cash_balance -= cost
-                self._entry_price = price
-
-        elif action == SELL and self._shares_held > 0:
-            proceeds = price * (1 - config.env.transaction_cost)
-            self._shares_held -= 1
-            self._cash_balance += proceeds
-            if self._shares_held == 0:
-                self._entry_price = 0.0
-=======
         if action == BUY and self._shares_held <= 1e-9:
             cost_per_share = price * (1 + config.env.transaction_cost)
             max_invest = self._cash_balance * config.risk.max_position_pct
@@ -229,7 +210,6 @@ class LivePredictor:
             self._cash_balance += proceeds
             self._shares_held = 0.0
             self._entry_price = 0.0
->>>>>>> master
 
     def _load_history(self):
         if not os.path.exists(self._log_file):
