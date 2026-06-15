@@ -1,7 +1,7 @@
 {
   "success": true,
   "ticker": "^NSEI",
-  "retrained_at": "2026-04-08T17:38:24.931380",
+  "retrained_at": "2026-06-14T14:16:08.173355",
   "agents_trained": [
     "ppo",
     "dqn",
@@ -10,11 +10,11 @@
   "training_results": {
     "ppo": {
       "status": "success",
-      "elapsed_sec": 25.0
+      "elapsed_sec": 69.6
     },
     "dqn": {
       "status": "success",
-      "elapsed_sec": 19.0
+      "elapsed_sec": 18.8
     },
     "ddqn": {
       "status": "failed",
@@ -22,7 +22,7 @@
     },
     "a2c": {
       "status": "success",
-      "elapsed_sec": 25.9
+      "elapsed_sec": 25.5
     }
   },
   "backtest_metrics": {
@@ -42,7 +42,7 @@
       "max_drawdown": 0.0
     }
   },
-  "elapsed_sec": 83.3,
-  "new_bar_count": 29640,
+  "elapsed_sec": 144.1,
+  "new_bar_count": 29700,
   "window_used": 1600
 }

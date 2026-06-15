@@ -1,7 +1,7 @@
 {
   "^NSEI": {
-    "last_bar_count": 29640,
-    "last_trained_at": "2026-04-08T17:38:24.931945",
+    "last_bar_count": 29700,
+    "last_trained_at": "2026-06-14T14:16:08.173677",
     "metrics": {
       "ppo": {
         "total_return": 0.0,

@@ -448,3 +448,588 @@ Next steps:
 2026-05-11 18:13:38 | INFO     | data_loader               | Loading ^NSEI from cache (0.04h old)
 2026-05-11 18:13:38 | INFO     | features                  | Computing technical indicators...
 2026-05-11 18:13:38 | INFO     | features                  | Indicators computed. Dropped 27 NaN rows. Final shape: (14793, 16)
+2026-05-11 18:14:38 | INFO     | data_loader               | Loading ^NSEI from cache (0.06h old)
+2026-05-11 18:14:38 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:14:38 | INFO     | features                  | Indicators computed. Dropped 27 NaN rows. Final shape: (14793, 16)
+2026-05-11 18:15:38 | INFO     | data_loader               | Loading ^NSEI from cache (0.07h old)
+2026-05-11 18:15:38 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:15:38 | INFO     | features                  | Indicators computed. Dropped 27 NaN rows. Final shape: (14793, 16)
+2026-05-11 18:16:08 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-11 18:16:08 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-11 18:16:08 | INFO     | data_loader               | Saved ^NSEI data: 4355 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-11 18:16:08 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:16:08 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4336, 16)
+2026-05-11 18:16:08 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-11 18:16:08 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-11 18:16:08 | INFO     | env                       | StockTradingEnv initialized | Steps: 4336 | Initial balance: 10000 | State dim: 13
+2026-05-11 18:16:08 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 238.2%
+2026-05-11 18:16:08 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23820.35 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-11 18:16:38 | INFO     | data_loader               | Downloading ^NSEI (1y, 5m)
+2026-05-11 18:16:45 | WARNING  | data_loader               | Direct intraday download unavailable for ^NSEI (1y, 5m). Building long intraday dataset from daily history + recent intraday.
+2026-05-11 18:16:45 | INFO     | data_loader               | Downloading ^NSEI (1y, 1d)
+2026-05-11 18:16:45 | INFO     | data_loader               | Saved ^NSEI data: 14820 rows -> data/IDX_NSEI_1y_5m.csv
+2026-05-11 18:16:45 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:16:45 | INFO     | features                  | Indicators computed. Dropped 27 NaN rows. Final shape: (14793, 16)
+2026-05-11 18:17:38 | INFO     | data_loader               | Loading ^NSEI from cache (0.01h old)
+2026-05-11 18:17:38 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:17:38 | INFO     | features                  | Indicators computed. Dropped 27 NaN rows. Final shape: (14793, 16)
+2026-05-11 18:18:55 | INFO     | data_loader               | Loading ^NSEI from cache (0.04h old)
+2026-05-11 18:18:55 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:18:55 | INFO     | features                  | Indicators computed. Dropped 27 NaN rows. Final shape: (14793, 16)
+2026-05-11 18:21:08 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-11 18:21:08 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-11 18:21:09 | INFO     | data_loader               | Saved ^NSEI data: 4355 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-11 18:21:09 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:21:09 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4336, 16)
+2026-05-11 18:21:09 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-11 18:21:09 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-11 18:21:09 | INFO     | env                       | StockTradingEnv initialized | Steps: 4336 | Initial balance: 10000 | State dim: 13
+2026-05-11 18:21:09 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 238.2%
+2026-05-11 18:21:09 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23820.35 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-11 18:26:09 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-11 18:26:09 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-11 18:26:09 | INFO     | data_loader               | Saved ^NSEI data: 4355 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-11 18:26:09 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:26:09 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4336, 16)
+2026-05-11 18:26:09 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-11 18:26:09 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-11 18:26:09 | INFO     | env                       | StockTradingEnv initialized | Steps: 4336 | Initial balance: 10000 | State dim: 13
+2026-05-11 18:26:09 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 238.2%
+2026-05-11 18:26:09 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23820.35 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-11 18:31:09 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-11 18:31:09 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-11 18:31:09 | INFO     | data_loader               | Saved ^NSEI data: 4355 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-11 18:31:09 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:31:09 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4336, 16)
+2026-05-11 18:31:09 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-11 18:31:09 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-11 18:31:09 | INFO     | env                       | StockTradingEnv initialized | Steps: 4336 | Initial balance: 10000 | State dim: 13
+2026-05-11 18:31:09 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 238.2%
+2026-05-11 18:31:09 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23820.35 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-11 18:36:09 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-11 18:36:09 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-11 18:36:10 | INFO     | data_loader               | Saved ^NSEI data: 4355 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-11 18:36:10 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:36:10 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4336, 16)
+2026-05-11 18:36:10 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-11 18:36:10 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-11 18:36:10 | INFO     | env                       | StockTradingEnv initialized | Steps: 4336 | Initial balance: 10000 | State dim: 13
+2026-05-11 18:36:10 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 238.2%
+2026-05-11 18:36:10 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23820.35 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-11 18:41:10 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-11 18:41:10 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-11 18:41:10 | INFO     | data_loader               | Saved ^NSEI data: 4355 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-11 18:41:10 | INFO     | features                  | Computing technical indicators...
+2026-05-11 18:41:10 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4336, 16)
+2026-05-11 18:41:10 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-11 18:41:10 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-11 18:41:10 | INFO     | env                       | StockTradingEnv initialized | Steps: 4336 | Initial balance: 10000 | State dim: 13
+2026-05-11 18:41:10 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 238.2%
+2026-05-11 18:41:10 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23820.35 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 04:58:28 | INFO     | risk_manager              | RiskManager initialized | stop_loss=5% | max_drawdown=15% | max_position=10% | max_trades/day=5
+2026-05-19 04:58:28 | INFO     | risk_manager              | RiskManager reset | Initial portfolio: 10000.00
+2026-05-19 04:58:28 | INFO     | predictor                 | Loaded 15 historical predictions
+2026-05-19 04:58:28 | INFO     | predictor                 | LivePredictor initialized | initial_balance=10000 | log_file=data/predictions_log.json
+2026-05-19 04:58:28 | INFO     | features                  | Computing technical indicators...
+2026-05-19 04:58:28 | INFO     | features                  | Indicators computed. Dropped 300 NaN rows. Final shape: (0, 16)
+2026-05-19 04:58:28 | INFO     | env                       | StockTradingEnv initialized | Steps: 300 | Initial balance: 10000 | State dim: 13
+2026-05-19 04:59:12 | INFO     | ensemble                  | ✓ Loaded ppo
+2026-05-19 04:59:12 | INFO     | ensemble                  | ✓ Loaded a2c
+2026-05-19 04:59:12 | INFO     | train_dqn                 | Loading DQN from models/dqn_stock
+2026-05-19 04:59:12 | INFO     | ensemble                  | ✓ Loaded dqn
+2026-05-19 04:59:13 | INFO     | train_dqn                 | DoubleDQN (Improved) initialized on cpu | n_steps=3 | noisy_std=0.5 | PER alpha=0.6 beta_start=0.4
+2026-05-19 04:59:13 | INFO     | train_dqn                 | DDQN loaded from models/ddqn_stock.pt | steps=99935
+2026-05-19 04:59:13 | INFO     | ensemble                  | ✓ Loaded ddqn
+2026-05-19 04:59:13 | INFO     | ensemble                  | Loaded 4 models: ['ppo', 'a2c', 'dqn', 'ddqn']
+2026-05-19 04:59:13 | INFO     | ensemble                  | Loaded persisted ensemble weights from models/ensemble_weights.json
+2026-05-19 04:59:13 | INFO     | ensemble                  | Ensemble initialized with 4 agents: ['ppo', 'a2c', 'dqn', 'ddqn']
+2026-05-19 04:59:13 | INFO     | ensemble                  | Normalized weights: {'ppo': 0.25, 'a2c': 0.25, 'dqn': 0.25, 'ddqn': 0.25}
+2026-05-19 04:59:13 | INFO     | predictor                 | Loaded 4 models for live prediction
+2026-05-19 04:59:13 | WARNING  | live_runner               | Socket.IO not available
+2026-05-19 04:59:13 | INFO     | live_runner               | Subscribed: ^NSEI
+2026-05-19 04:59:13 | INFO     | live_runner               | Refresh loop started
+2026-05-19 04:59:13 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 04:59:13 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 04:59:13 | INFO     | live_runner               | Scheduler started for ['^NSEI']
+2026-05-19 04:59:13 | INFO     | live_runner               | Live feed started
+2026-05-19 04:59:13 | INFO     | risk_manager              | RiskManager initialized | stop_loss=5% | max_drawdown=15% | max_position=10% | max_trades/day=5
+2026-05-19 04:59:13 | INFO     | data_loader               | Downloading ^NSEI (1y, 5m)
+2026-05-19 04:59:14 | INFO     | data_loader               | Saved ^NSEI data: 4295 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 04:59:14 | INFO     | features                  | Computing technical indicators...
+2026-05-19 04:59:14 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4276, 16)
+2026-05-19 04:59:14 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 04:59:14 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 04:59:14 | INFO     | env                       | StockTradingEnv initialized | Steps: 4276 | Initial balance: 10000 | State dim: 13
+2026-05-19 04:59:15 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 04:59:15 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23745.30 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 04:59:21 | WARNING  | data_loader               | Direct intraday download unavailable for ^NSEI (1y, 5m). Building long intraday dataset from daily history + recent intraday.
+2026-05-19 04:59:21 | INFO     | data_loader               | Downloading ^NSEI (1y, 1d)
+2026-05-19 04:59:22 | INFO     | data_loader               | Saved ^NSEI data: 14880 rows -> data/IDX_NSEI_1y_5m.csv
+2026-05-19 04:59:22 | INFO     | features                  | Computing technical indicators...
+2026-05-19 04:59:22 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 04:59:22 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 04:59:22 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 04:59:47 | INFO     | data_loader               | Loading ^NSEI from cache (0.01h old)
+2026-05-19 04:59:47 | INFO     | features                  | Computing technical indicators...
+2026-05-19 04:59:47 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 04:59:52 | WARNING  | live_runner               | Socket.IO not available
+2026-05-19 04:59:52 | INFO     | live_runner               | Refresh loop started
+2026-05-19 04:59:52 | INFO     | live_runner               | Scheduler started for ['^NSEI']
+2026-05-19 04:59:52 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 04:59:52 | INFO     | live_runner               | Live feed started
+2026-05-19 04:59:52 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 04:59:52 | INFO     | data_loader               | Loading ^NSEI from cache (0.01h old)
+2026-05-19 04:59:53 | INFO     | features                  | Computing technical indicators...
+2026-05-19 04:59:53 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 04:59:53 | INFO     | data_loader               | Saved ^NSEI data: 4295 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 04:59:53 | INFO     | features                  | Computing technical indicators...
+2026-05-19 04:59:54 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4276, 16)
+2026-05-19 04:59:54 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 04:59:54 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 04:59:54 | INFO     | env                       | StockTradingEnv initialized | Steps: 4276 | Initial balance: 10000 | State dim: 13
+2026-05-19 04:59:54 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 04:59:54 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23751.65 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 04:59:54 | INFO     | features                  | Computing technical indicators...
+2026-05-19 04:59:54 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4276, 16)
+2026-05-19 04:59:54 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 04:59:54 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 04:59:54 | INFO     | env                       | StockTradingEnv initialized | Steps: 4276 | Initial balance: 10000 | State dim: 13
+2026-05-19 04:59:54 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 04:59:54 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23751.65 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:01:23 | INFO     | risk_manager              | RiskManager initialized | stop_loss=5% | max_drawdown=15% | max_position=10% | max_trades/day=5
+2026-05-19 05:01:23 | INFO     | risk_manager              | RiskManager reset | Initial portfolio: 10000.00
+2026-05-19 05:01:23 | INFO     | predictor                 | Loaded 18 historical predictions
+2026-05-19 05:01:23 | INFO     | predictor                 | LivePredictor initialized | initial_balance=10000 | log_file=data/predictions_log.json
+2026-05-19 05:01:23 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:01:23 | INFO     | features                  | Indicators computed. Dropped 300 NaN rows. Final shape: (0, 16)
+2026-05-19 05:01:23 | INFO     | env                       | StockTradingEnv initialized | Steps: 300 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:01:31 | INFO     | ensemble                  | ✓ Loaded ppo
+2026-05-19 05:01:31 | INFO     | ensemble                  | ✓ Loaded a2c
+2026-05-19 05:01:31 | INFO     | train_dqn                 | Loading DQN from models/dqn_stock
+2026-05-19 05:01:31 | INFO     | ensemble                  | ✓ Loaded dqn
+2026-05-19 05:01:31 | INFO     | train_dqn                 | DoubleDQN (Improved) initialized on cpu | n_steps=3 | noisy_std=0.5 | PER alpha=0.6 beta_start=0.4
+2026-05-19 05:01:31 | INFO     | train_dqn                 | DDQN loaded from models/ddqn_stock.pt | steps=99935
+2026-05-19 05:01:31 | INFO     | ensemble                  | ✓ Loaded ddqn
+2026-05-19 05:01:31 | INFO     | ensemble                  | Loaded 4 models: ['ppo', 'a2c', 'dqn', 'ddqn']
+2026-05-19 05:01:31 | INFO     | ensemble                  | Loaded persisted ensemble weights from models/ensemble_weights.json
+2026-05-19 05:01:31 | INFO     | ensemble                  | Ensemble initialized with 4 agents: ['ppo', 'a2c', 'dqn', 'ddqn']
+2026-05-19 05:01:31 | INFO     | ensemble                  | Normalized weights: {'ppo': 0.25, 'a2c': 0.25, 'dqn': 0.25, 'ddqn': 0.25}
+2026-05-19 05:01:31 | INFO     | predictor                 | Loaded 4 models for live prediction
+2026-05-19 05:01:31 | WARNING  | live_runner               | Socket.IO not available
+2026-05-19 05:01:31 | INFO     | live_runner               | Subscribed: ^NSEI
+2026-05-19 05:01:31 | INFO     | live_runner               | Refresh loop started
+2026-05-19 05:01:31 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:01:31 | INFO     | live_runner               | Scheduler started for ['^NSEI']
+2026-05-19 05:01:31 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:01:31 | INFO     | live_runner               | Live feed started
+2026-05-19 05:01:31 | INFO     | risk_manager              | RiskManager initialized | stop_loss=5% | max_drawdown=15% | max_position=10% | max_trades/day=5
+2026-05-19 05:01:31 | INFO     | data_loader               | Loading ^NSEI from cache (0.04h old)
+2026-05-19 05:01:31 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:01:31 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:01:31 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:01:31 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:01:32 | INFO     | data_loader               | Saved ^NSEI data: 4296 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:01:32 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:01:33 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4277, 16)
+2026-05-19 05:01:33 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:01:33 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:01:33 | INFO     | env                       | StockTradingEnv initialized | Steps: 4277 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:01:33 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:01:33 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23751.00 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:02:31 | INFO     | data_loader               | Loading ^NSEI from cache (0.05h old)
+2026-05-19 05:02:31 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:02:31 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:03:24 | WARNING  | live_runner               | Socket.IO not available
+2026-05-19 05:03:24 | INFO     | live_runner               | Refresh loop started
+2026-05-19 05:03:24 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:03:24 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:03:24 | INFO     | live_runner               | Scheduler started for ['^NSEI']
+2026-05-19 05:03:24 | INFO     | live_runner               | Live feed started
+2026-05-19 05:03:24 | INFO     | data_loader               | Loading ^NSEI from cache (0.07h old)
+2026-05-19 05:03:24 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:03:24 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:03:25 | INFO     | data_loader               | Saved ^NSEI data: 4296 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:03:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:03:25 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4277, 16)
+2026-05-19 05:03:25 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:03:25 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:03:25 | INFO     | env                       | StockTradingEnv initialized | Steps: 4277 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:03:25 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.4%
+2026-05-19 05:03:25 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23740.95 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:03:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:03:25 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4277, 16)
+2026-05-19 05:03:25 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:03:25 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:03:25 | INFO     | env                       | StockTradingEnv initialized | Steps: 4277 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:03:25 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.4%
+2026-05-19 05:03:25 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23740.95 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:04:26 | INFO     | data_loader               | Downloading ^NSEI (1y, 5m)
+2026-05-19 05:04:35 | WARNING  | data_loader               | Direct intraday download unavailable for ^NSEI (1y, 5m). Building long intraday dataset from daily history + recent intraday.
+2026-05-19 05:04:35 | INFO     | data_loader               | Downloading ^NSEI (1y, 1d)
+2026-05-19 05:04:36 | INFO     | data_loader               | Saved ^NSEI data: 14880 rows -> data/IDX_NSEI_1y_5m.csv
+2026-05-19 05:04:36 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:04:36 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:05:55 | INFO     | data_loader               | Loading ^NSEI from cache (0.02h old)
+2026-05-19 05:05:55 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:05:55 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:06:28 | INFO     | data_loader               | Loading ^NSEI from cache (0.03h old)
+2026-05-19 05:06:28 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:06:28 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:06:33 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:06:33 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:06:33 | INFO     | data_loader               | Saved ^NSEI data: 4297 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:06:33 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:06:33 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4278, 16)
+2026-05-19 05:06:33 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:06:33 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:06:33 | INFO     | env                       | StockTradingEnv initialized | Steps: 4278 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:06:33 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.4%
+2026-05-19 05:06:33 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23737.70 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:06:33 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:06:33 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4278, 16)
+2026-05-19 05:06:33 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:06:33 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:06:33 | INFO     | env                       | StockTradingEnv initialized | Steps: 4278 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:06:33 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.4%
+2026-05-19 05:06:33 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23737.70 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:07:25 | INFO     | data_loader               | Loading ^NSEI from cache (0.05h old)
+2026-05-19 05:07:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:07:26 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:08:25 | INFO     | data_loader               | Loading ^NSEI from cache (0.06h old)
+2026-05-19 05:08:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:08:25 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:08:25 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:08:25 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:08:26 | INFO     | data_loader               | Saved ^NSEI data: 4297 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:08:26 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:08:26 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4278, 16)
+2026-05-19 05:08:26 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:08:26 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:08:26 | INFO     | env                       | StockTradingEnv initialized | Steps: 4278 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:08:26 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:08:26 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23749.40 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:08:26 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:08:26 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4278, 16)
+2026-05-19 05:08:26 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:08:26 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:08:26 | INFO     | env                       | StockTradingEnv initialized | Steps: 4278 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:08:26 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:08:26 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23749.40 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:09:25 | INFO     | data_loader               | Downloading ^NSEI (1y, 5m)
+2026-05-19 05:09:33 | WARNING  | data_loader               | Direct intraday download unavailable for ^NSEI (1y, 5m). Building long intraday dataset from daily history + recent intraday.
+2026-05-19 05:09:33 | INFO     | data_loader               | Downloading ^NSEI (1y, 1d)
+2026-05-19 05:09:34 | INFO     | data_loader               | Saved ^NSEI data: 14880 rows -> data/IDX_NSEI_1y_5m.csv
+2026-05-19 05:09:34 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:09:34 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:10:25 | INFO     | data_loader               | Loading ^NSEI from cache (0.01h old)
+2026-05-19 05:10:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:10:25 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:11:25 | INFO     | data_loader               | Loading ^NSEI from cache (0.03h old)
+2026-05-19 05:11:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:11:25 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:11:33 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:11:33 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:11:34 | INFO     | data_loader               | Saved ^NSEI data: 4298 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:11:34 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:11:34 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4279, 16)
+2026-05-19 05:11:34 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:11:34 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:11:34 | INFO     | env                       | StockTradingEnv initialized | Steps: 4279 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:11:34 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:11:34 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23751.90 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:11:34 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:11:34 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4279, 16)
+2026-05-19 05:11:34 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:11:34 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:11:34 | INFO     | env                       | StockTradingEnv initialized | Steps: 4279 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:11:34 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:11:34 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23751.90 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:12:25 | INFO     | data_loader               | Loading ^NSEI from cache (0.05h old)
+2026-05-19 05:12:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:12:25 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:13:25 | INFO     | data_loader               | Loading ^NSEI from cache (0.06h old)
+2026-05-19 05:13:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:13:25 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:13:26 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:13:26 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:13:27 | INFO     | data_loader               | Saved ^NSEI data: 4298 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:13:27 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:13:27 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4279, 16)
+2026-05-19 05:13:27 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:13:27 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:13:27 | INFO     | env                       | StockTradingEnv initialized | Steps: 4279 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:13:27 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:13:27 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23762.40 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:13:27 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:13:27 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4279, 16)
+2026-05-19 05:13:27 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:13:27 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:13:27 | INFO     | env                       | StockTradingEnv initialized | Steps: 4279 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:13:27 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:13:27 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23762.40 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:14:25 | INFO     | data_loader               | Downloading ^NSEI (1y, 5m)
+2026-05-19 05:14:33 | WARNING  | data_loader               | Direct intraday download unavailable for ^NSEI (1y, 5m). Building long intraday dataset from daily history + recent intraday.
+2026-05-19 05:14:33 | INFO     | data_loader               | Downloading ^NSEI (1y, 1d)
+2026-05-19 05:14:33 | INFO     | data_loader               | Saved ^NSEI data: 14880 rows -> data/IDX_NSEI_1y_5m.csv
+2026-05-19 05:14:33 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:14:33 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:15:25 | INFO     | data_loader               | Loading ^NSEI from cache (0.01h old)
+2026-05-19 05:15:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:15:25 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:16:25 | INFO     | data_loader               | Loading ^NSEI from cache (0.03h old)
+2026-05-19 05:16:25 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:16:25 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (14861, 16)
+2026-05-19 05:16:34 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:16:34 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:16:34 | INFO     | data_loader               | Saved ^NSEI data: 4299 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:16:34 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:16:34 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4280, 16)
+2026-05-19 05:16:34 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:16:34 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:16:34 | INFO     | env                       | StockTradingEnv initialized | Steps: 4280 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:16:34 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.7%
+2026-05-19 05:16:34 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23772.45 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:16:34 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:16:34 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4280, 16)
+2026-05-19 05:16:34 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:16:34 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:16:34 | INFO     | env                       | StockTradingEnv initialized | Steps: 4280 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:16:34 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.7%
+2026-05-19 05:16:34 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23772.45 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:18:27 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:18:27 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:18:27 | INFO     | data_loader               | Saved ^NSEI data: 4299 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:18:27 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:18:27 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4280, 16)
+2026-05-19 05:18:27 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:18:27 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:18:27 | INFO     | env                       | StockTradingEnv initialized | Steps: 4280 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:18:27 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:18:27 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23755.85 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:18:27 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:18:27 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4280, 16)
+2026-05-19 05:18:27 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:18:27 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:18:27 | INFO     | env                       | StockTradingEnv initialized | Steps: 4280 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:18:27 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:18:27 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23755.85 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:21:34 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:21:34 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:21:35 | INFO     | data_loader               | Saved ^NSEI data: 4300 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:21:35 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:21:35 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4281, 16)
+2026-05-19 05:21:35 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:21:35 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:21:35 | INFO     | env                       | StockTradingEnv initialized | Steps: 4281 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:21:35 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:21:35 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23762.85 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:21:35 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:21:35 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4281, 16)
+2026-05-19 05:21:35 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:21:35 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:21:35 | INFO     | env                       | StockTradingEnv initialized | Steps: 4281 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:21:35 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:21:35 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23762.85 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:23:27 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:23:27 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:23:27 | INFO     | data_loader               | Saved ^NSEI data: 4300 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:23:27 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:23:27 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4281, 16)
+2026-05-19 05:23:27 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:23:27 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:23:27 | INFO     | env                       | StockTradingEnv initialized | Steps: 4281 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:23:27 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:23:27 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23755.60 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:23:27 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:23:27 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4281, 16)
+2026-05-19 05:23:27 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:23:27 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:23:27 | INFO     | env                       | StockTradingEnv initialized | Steps: 4281 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:23:27 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:23:27 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23755.60 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:26:35 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:26:35 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:26:35 | INFO     | data_loader               | Saved ^NSEI data: 4301 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:26:35 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:26:35 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4282, 16)
+2026-05-19 05:26:35 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:26:35 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:26:35 | INFO     | env                       | StockTradingEnv initialized | Steps: 4282 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:26:35 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:26:35 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23763.55 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:26:35 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:26:35 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4282, 16)
+2026-05-19 05:26:35 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:26:35 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:26:35 | INFO     | env                       | StockTradingEnv initialized | Steps: 4282 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:26:35 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:26:35 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23763.55 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:28:27 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:28:27 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:28:28 | INFO     | data_loader               | Saved ^NSEI data: 4301 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:28:28 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:28:28 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4282, 16)
+2026-05-19 05:28:28 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:28:28 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:28:28 | INFO     | env                       | StockTradingEnv initialized | Steps: 4282 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:28:28 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.8%
+2026-05-19 05:28:28 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23779.25 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:28:28 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:28:28 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4282, 16)
+2026-05-19 05:28:28 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:28:28 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:28:28 | INFO     | env                       | StockTradingEnv initialized | Steps: 4282 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:28:28 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.8%
+2026-05-19 05:28:28 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23779.25 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:31:35 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:31:35 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:31:36 | INFO     | data_loader               | Saved ^NSEI data: 4302 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:31:36 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:31:36 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4283, 16)
+2026-05-19 05:31:36 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:31:36 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:31:36 | INFO     | env                       | StockTradingEnv initialized | Steps: 4283 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:31:36 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:31:36 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23761.45 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:31:36 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:31:36 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4283, 16)
+2026-05-19 05:31:36 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:31:36 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:31:36 | INFO     | env                       | StockTradingEnv initialized | Steps: 4283 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:31:36 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.6%
+2026-05-19 05:31:36 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23761.45 | Confidence: 75.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:33:28 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:33:28 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:33:29 | INFO     | data_loader               | Saved ^NSEI data: 4302 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:33:29 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:33:29 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4283, 16)
+2026-05-19 05:33:29 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:33:29 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:33:29 | INFO     | env                       | StockTradingEnv initialized | Steps: 4283 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:33:29 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:33:29 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23747.05 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:33:29 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:33:29 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4283, 16)
+2026-05-19 05:33:29 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:33:29 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:33:29 | INFO     | env                       | StockTradingEnv initialized | Steps: 4283 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:33:29 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:33:29 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23747.05 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:36:36 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:36:36 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:36:36 | INFO     | data_loader               | Saved ^NSEI data: 4303 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:36:36 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:36:36 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4284, 16)
+2026-05-19 05:36:36 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:36:36 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:36:36 | INFO     | env                       | StockTradingEnv initialized | Steps: 4284 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:36:36 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:36:36 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23749.25 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:36:36 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:36:36 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4284, 16)
+2026-05-19 05:36:36 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:36:36 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:36:36 | INFO     | env                       | StockTradingEnv initialized | Steps: 4284 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:36:36 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:36:36 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23749.25 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:38:29 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:38:29 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:38:29 | INFO     | data_loader               | Saved ^NSEI data: 4303 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:38:29 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:38:29 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4284, 16)
+2026-05-19 05:38:29 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:38:29 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:38:29 | INFO     | env                       | StockTradingEnv initialized | Steps: 4284 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:38:29 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.4%
+2026-05-19 05:38:29 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23740.75 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:38:29 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:38:29 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4284, 16)
+2026-05-19 05:38:29 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:38:29 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:38:29 | INFO     | env                       | StockTradingEnv initialized | Steps: 4284 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:38:29 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.4%
+2026-05-19 05:38:29 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23740.75 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:41:36 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:41:36 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:41:37 | INFO     | data_loader               | Saved ^NSEI data: 4304 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:41:37 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:41:37 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4285, 16)
+2026-05-19 05:41:37 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:41:37 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:41:37 | INFO     | env                       | StockTradingEnv initialized | Steps: 4285 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:41:37 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:41:37 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23753.00 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:41:37 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:41:37 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4285, 16)
+2026-05-19 05:41:37 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:41:37 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:41:37 | INFO     | env                       | StockTradingEnv initialized | Steps: 4285 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:41:37 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.5%
+2026-05-19 05:41:37 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23753.00 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:43:29 | INFO     | live_runner               | Refreshing: ^NSEI
+2026-05-19 05:43:29 | INFO     | data_loader               | Downloading ^NSEI (60d, 5m)
+2026-05-19 05:43:29 | INFO     | data_loader               | Saved ^NSEI data: 4304 rows -> data/IDX_NSEI_60d_5m.csv
+2026-05-19 05:43:29 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:43:29 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4285, 16)
+2026-05-19 05:43:29 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:43:29 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:43:29 | INFO     | env                       | StockTradingEnv initialized | Steps: 4285 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:43:29 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.4%
+2026-05-19 05:43:29 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23744.15 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-05-19 05:43:29 | INFO     | features                  | Computing technical indicators...
+2026-05-19 05:43:29 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (4285, 16)
+2026-05-19 05:43:29 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-05-19 05:43:29 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-05-19 05:43:29 | INFO     | env                       | StockTradingEnv initialized | Steps: 4285 | Initial balance: 10000 | State dim: 13
+2026-05-19 05:43:29 | WARNING  | risk_manager              | RISK OVERRIDE: BUY → HOLD | Position limit exceeded: 237.4%
+2026-05-19 05:43:29 | INFO     | predictor                 | [^NSEI] PREDICTION → HOLD | Price: 23744.15 | Confidence: 50.00% | Sentiment: +0.000 | Risk: POSITION_CAP
+2026-06-14 14:13:44 | INFO     | __main__                  | ============================================================
+2026-06-14 14:13:44 | INFO     | __main__                  | SLIDING WINDOW RETRAIN: ^NSEI
+2026-06-14 14:13:44 | INFO     | __main__                  | Timesteps: 20000 | Agents: ['ppo', 'dqn', 'ddqn', 'a2c']
+2026-06-14 14:13:44 | INFO     | __main__                  | ============================================================
+2026-06-14 14:13:44 | INFO     | __main__                  | [Retrain] 16% — Loading market data...
+2026-06-14 14:13:44 | INFO     | data_loader               | Downloading ^NSEI (2y, 5m)
+2026-06-14 14:13:52 | WARNING  | data_loader               | Direct intraday download unavailable for ^NSEI (2y, 5m). Building long intraday dataset from daily history + recent intraday.
+2026-06-14 14:13:52 | INFO     | data_loader               | Downloading ^NSEI (2y, 1d)
+2026-06-14 14:13:53 | INFO     | data_loader               | Saved ^NSEI data: 29700 rows -> data/IDX_NSEI_2y_5m.csv
+2026-06-14 14:13:53 | INFO     | __main__                  | [^NSEI] 60 new bars since last training (threshold=20) → retrain needed
+2026-06-14 14:13:53 | INFO     | __main__                  | [Retrain] 33% — Computing technical features...
+2026-06-14 14:13:53 | INFO     | features                  | Computing technical indicators...
+2026-06-14 14:13:53 | INFO     | features                  | Indicators computed. Dropped 19 NaN rows. Final shape: (29681, 16)
+2026-06-14 14:13:53 | INFO     | __main__                  | [Retrain] 50% — Applying sliding window...
+2026-06-14 14:13:53 | INFO     | __main__                  | Sliding window applied: using last 2000 bars
+2026-06-14 14:13:53 | WARNING  | sentiment                 | [^NSEI] No real news found.
+2026-06-14 14:13:53 | WARNING  | sentiment                 | [^NSEI] No news found. Returning neutral score 0.0
+2026-06-14 14:13:53 | INFO     | __main__                  | Train: 1600 bars | Test: 400 bars
+2026-06-14 14:13:53 | INFO     | env                       | StockTradingEnv initialized | Steps: 1600 | Initial balance: 10000 | State dim: 13
+2026-06-14 14:13:53 | INFO     | __main__                  | [Retrain] 66% — Retraining 4 agents...
+2026-06-14 14:13:53 | INFO     | __main__                  |   Retraining ppo...
+2026-06-14 14:14:25 | INFO     | __main__                  |   Fine-tuning existing PPO model...
+2026-06-14 14:15:03 | INFO     | __main__                  |   ✓ ppo retrained in 69.6s
+2026-06-14 14:15:03 | INFO     | __main__                  |   Retraining dqn...
+2026-06-14 14:15:03 | INFO     | __main__                  |   Fine-tuning existing DQN model...
+2026-06-14 14:15:22 | INFO     | __main__                  |   ✓ dqn retrained in 18.8s
+2026-06-14 14:15:22 | INFO     | __main__                  |   Retraining ddqn...
+2026-06-14 14:15:22 | INFO     | __main__                  |   Fine-tuning existing DDQN model...
+2026-06-14 14:15:22 | INFO     | train_dqn                 | DoubleDQN (Improved) initialized on cpu | n_steps=3 | noisy_std=0.5 | PER alpha=0.6 beta_start=0.4
+2026-06-14 14:15:22 | INFO     | train_dqn                 | DDQN loaded from models/ddqn_stock.pt | steps=99935
+2026-06-14 14:15:36 | INFO     | __main__                  |   DDQN fine-tune | Step 2000/20000 | Loss: 0.00000
+2026-06-14 14:15:41 | ERROR    | __main__                  |   ✗ ddqn retraining failed: 'int' object has no attribute 'state'
+2026-06-14 14:15:41 | INFO     | __main__                  |   Retraining a2c...
+2026-06-14 14:15:41 | INFO     | __main__                  |   Fine-tuning existing A2C model...
+2026-06-14 14:16:07 | INFO     | __main__                  |   ✓ a2c retrained in 25.5s
+2026-06-14 14:16:07 | INFO     | __main__                  | [Retrain] 83% — Running quick backtest...
+2026-06-14 14:16:07 | INFO     | env                       | StockTradingEnv initialized | Steps: 400 | Initial balance: 10000 | State dim: 13
+2026-06-14 14:16:07 | INFO     | backtest                  | Backtest [ppo] | Return: 0.00% | Sharpe: -3671020.59 | MaxDD: 0.00%
+2026-06-14 14:16:07 | INFO     | __main__                  |   [ppo] Return=0.00% | Sharpe=-3671020.593
+2026-06-14 14:16:07 | INFO     | backtest                  | Backtest [dqn] | Return: 0.00% | Sharpe: -3671020.59 | MaxDD: 0.00%
+2026-06-14 14:16:07 | INFO     | __main__                  |   [dqn] Return=0.00% | Sharpe=-3671020.593
+2026-06-14 14:16:08 | INFO     | backtest                  | Backtest [a2c] | Return: 0.00% | Sharpe: -3671020.59 | MaxDD: 0.00%
+2026-06-14 14:16:08 | INFO     | __main__                  |   [a2c] Return=0.00% | Sharpe=-3671020.593
+2026-06-14 14:16:08 | INFO     | __main__                  | [Retrain] 100% — Updating ensemble weights...
+2026-06-14 14:16:08 | INFO     | ensemble                  | Loaded persisted ensemble weights from models/ensemble_weights.json
+2026-06-14 14:16:08 | INFO     | ensemble                  | Ensemble initialized with 3 agents: ['ppo', 'dqn', 'a2c']
+2026-06-14 14:16:08 | INFO     | ensemble                  | Normalized weights: {'ppo': 0.3333333333333333, 'dqn': 0.3333333333333333, 'a2c': 0.3333333333333333}
+2026-06-14 14:16:08 | INFO     | ensemble                  | Ensemble weights updated from Sharpe ratios: {'ppo': 0.33333333333333337, 'dqn': 0.33333333333333337, 'a2c': 0.33333333333333337}
+2026-06-14 14:16:08 | INFO     | __main__                  | Ensemble weights updated: {'ppo': 0.33333333333333337, 'dqn': 0.33333333333333337, 'a2c': 0.33333333333333337}
+2026-06-14 14:16:08 | INFO     | __main__                  | RETRAIN COMPLETE | elapsed=144.1s | agents=['ppo', 'dqn', 'a2c']
