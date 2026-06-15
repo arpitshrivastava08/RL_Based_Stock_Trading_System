@@ -26,7 +26,11 @@ class RiskSignal(Enum):
 @dataclass
 class PortfolioState:
     cash_balance: float
+<<<<<<< HEAD
     shares_held: int
+=======
+    shares_held: float
+>>>>>>> master
     current_price: float
     entry_price: float = 0.0
     peak_portfolio: float = 0.0
@@ -106,12 +110,23 @@ class RiskManager:
 
         # Track entry price
         if recommended_action == BUY:
+<<<<<<< HEAD
             if state.shares_held == 0:
                 self.entry_price = state.current_price
             else:
                 total_cost = self.entry_price * state.shares_held
                 total_cost += state.current_price
                 self.entry_price = total_cost / (state.shares_held + 1)
+=======
+            if state.shares_held <= 1e-9:
+                self.entry_price = state.current_price
+            else:
+                total_shares = state.shares_held
+                self.entry_price = (
+                    (self.entry_price * total_shares + state.current_price)
+                    / (total_shares + 1e-9)
+                )
+>>>>>>> master
 
         # ── RISK CHECK 1: Trading Halted ──
         if self.trading_halted:
@@ -140,7 +155,11 @@ class RiskManager:
         # ── RISK CHECK 3: Stop Loss ──
         if (
             recommended_action != SELL
+<<<<<<< HEAD
             and state.shares_held > 0
+=======
+            and state.shares_held > 1e-9
+>>>>>>> master
             and self.entry_price > 0
         ):
             loss_pct = (self.entry_price - state.current_price) / self.entry_price
@@ -155,7 +174,13 @@ class RiskManager:
 
         # ── RISK CHECK 4: Position Limit ──
         if recommended_action == BUY:
+<<<<<<< HEAD
             projected_value = (state.shares_held + 1) * state.current_price
+=======
+            projected_value = state.position_value + (
+                state.cash_balance * self.cfg.max_position_pct
+            )
+>>>>>>> master
             pct = projected_value / max(state.portfolio_value, 1.0)
 
             if pct > self.cfg.max_position_pct:
@@ -208,7 +233,11 @@ class RiskManager:
         self.intervention_log.append(entry)
 
         logger.warning(
+<<<<<<< HEAD
             f"RISK OVERRIDE: {entry['original']} → {entry['override']} | {reason}"
+=======
+            f"RISK OVERRIDE: {entry['original']} -> {entry['override']} | {reason}"
+>>>>>>> master
         )
 
         return override_action, signal, reason

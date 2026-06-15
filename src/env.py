@@ -3,6 +3,10 @@ import numpy as np
 import pandas as pd
 import gymnasium as gym
 from gymnasium import spaces
+<<<<<<< HEAD
+=======
+from collections import deque
+>>>>>>> master
 from typing import Optional, Tuple, Dict, Any, List
 
 from logger import get_logger
@@ -20,6 +24,24 @@ SELL = 2
 ACTION_NAMES = {HOLD: "HOLD", BUY: "BUY", SELL: "SELL"}
 
 
+<<<<<<< HEAD
+=======
+def compute_sharpe_from_returns(
+    returns: np.ndarray,
+    periods_per_year: int = 252,
+) -> float:
+    """Annualized Sharpe ratio; returns 0 when variance is negligible."""
+    if len(returns) < 2:
+        return 0.0
+    rf = (1 + config.backtest.risk_free_rate) ** (1 / periods_per_year) - 1
+    excess = returns - rf
+    std = float(excess.std())
+    if std < 1e-10:
+        return 0.0
+    return float((excess.mean() / std) * np.sqrt(periods_per_year))
+
+
+>>>>>>> master
 class StockTradingEnv(gym.Env):
    
 
@@ -63,12 +85,22 @@ class StockTradingEnv(gym.Env):
         # ── Portfolio State ───────────────────────────────────────────
         self.initial_balance = initial_balance or self.cfg.initial_balance
         self.balance: float = self.initial_balance
+<<<<<<< HEAD
         self.shares_held: int = 0
+=======
+        self.shares_held: float = 0.0
+>>>>>>> master
         self.entry_price: float = 0.0
         self.current_step: int = 0
         self.trade_count: int = 0
         self.portfolio_history: List[float] = []
         self.trade_log: List[dict] = []
+<<<<<<< HEAD
+=======
+        self._recent_returns: deque = deque(
+            maxlen=self.cfg.reward_downside_window
+        )
+>>>>>>> master
 
         # Normalization stats (computed once from training data)
         self._norm_mean: Optional[np.ndarray] = None
@@ -95,12 +127,20 @@ class StockTradingEnv(gym.Env):
         super().reset(seed=seed)
 
         self.balance = self.initial_balance
+<<<<<<< HEAD
         self.shares_held = 0
+=======
+        self.shares_held = 0.0
+>>>>>>> master
         self.entry_price = 0.0
         self.current_step = 0
         self.trade_count = 0
         self.portfolio_history = [self.initial_balance]
         self.trade_log = []
+<<<<<<< HEAD
+=======
+        self._recent_returns.clear()
+>>>>>>> master
 
         obs = self._get_obs()
         info = self._get_info()
@@ -124,12 +164,24 @@ class StockTradingEnv(gym.Env):
         reward = 0.0
         trade_made = False
 
+<<<<<<< HEAD
         # ── Execute Action ────────────────────────────────────────────
         if action == BUY:
             cost = price * (1 + self.cfg.transaction_cost)
             if self.balance >= cost:
                 self.shares_held += 1
                 self.balance -= cost
+=======
+        # ── Execute Action (fractional shares — index prices exceed small balances) ──
+        if action == BUY and self.shares_held <= 1e-9:
+            cost_per_share = price * (1 + self.cfg.transaction_cost)
+            max_invest = self.balance * config.risk.max_position_pct
+            invest = min(self.balance, max(max_invest, cost_per_share * 0.01))
+            if invest >= cost_per_share * 1e-6:
+                shares = invest / cost_per_share
+                self.shares_held = shares
+                self.balance -= shares * cost_per_share
+>>>>>>> master
                 self.entry_price = price
                 self.trade_count += 1
                 trade_made = True
@@ -140,6 +192,7 @@ class StockTradingEnv(gym.Env):
                     "shares": self.shares_held,
                 })
 
+<<<<<<< HEAD
         elif action == SELL:
             if self.shares_held > 0:
                 proceeds = price * (1 - self.cfg.transaction_cost)
@@ -153,6 +206,22 @@ class StockTradingEnv(gym.Env):
                     "price": price,
                     "shares": self.shares_held,
                 })
+=======
+        elif action == SELL and self.shares_held > 1e-9:
+            proceeds = self.shares_held * price * (1 - self.cfg.transaction_cost)
+            self.balance += proceeds
+            sold_shares = self.shares_held
+            self.shares_held = 0.0
+            self.entry_price = 0.0
+            self.trade_count += 1
+            trade_made = True
+            self.trade_log.append({
+                "step": self.current_step,
+                "action": "SELL",
+                "price": price,
+                "shares": sold_shares,
+            })
+>>>>>>> master
 
         # ── Advance Step ──────────────────────────────────────────────
         self.current_step += 1
@@ -163,6 +232,7 @@ class StockTradingEnv(gym.Env):
         next_price = float(self.df["Close"].iloc[self.current_step])
         new_portfolio = self._portfolio_value(next_price)
 
+<<<<<<< HEAD
         # Base reward: change in portfolio value (scaled)
         reward = (new_portfolio - prev_portfolio) * self.cfg.reward_scaling
 
@@ -180,6 +250,15 @@ class StockTradingEnv(gym.Env):
                 trend_bonus = atr * self.cfg.reward_scaling * 0.1
                 reward += trend_bonus
 
+=======
+        reward = self._risk_aware_reward(
+            prev_portfolio, new_portfolio, price, next_price
+        )
+
+        if self.trade_count > self.cfg.max_trades_per_episode:
+            reward -= self.cfg.overtrading_penalty
+
+>>>>>>> master
         self.portfolio_history.append(new_portfolio)
 
         obs = self._get_obs()
@@ -245,6 +324,41 @@ class StockTradingEnv(gym.Env):
         """Current total portfolio value (cash + stock holdings)."""
         return self.balance + self.shares_held * price
 
+<<<<<<< HEAD
+=======
+    def _risk_aware_reward(
+        self,
+        prev_portfolio: float,
+        new_portfolio: float,
+        price: float,
+        next_price: float,
+    ) -> float:
+        """
+        Composite step reward inspired by Srivastava et al. (arXiv:2506.04358):
+        balances return, downside risk, benchmark alpha, and Treynor-style ratio.
+        """
+        step_return = (new_portfolio - prev_portfolio) / (prev_portfolio + 1e-9)
+        bench_return = (next_price - price) / (price + 1e-9)
+        self._recent_returns.append(step_return)
+
+        window = list(self._recent_returns)
+        downside = float(
+            np.sqrt(np.mean(np.square(np.minimum(0.0, window))))
+        ) if window else 0.0
+
+        alpha = step_return - bench_return
+        exposure = max(self.shares_held * price / (prev_portfolio + 1e-9), 0.05)
+        treynor = step_return / exposure
+
+        composite = (
+            self.cfg.reward_w_return * step_return
+            - self.cfg.reward_w_downside * downside
+            + self.cfg.reward_w_alpha * alpha
+            + self.cfg.reward_w_treynor * treynor * 0.01
+        )
+        return composite * self.cfg.reward_scaling
+
+>>>>>>> master
     def _get_info(self) -> dict:
         """Return auxiliary info dict."""
         price = float(self.df["Close"].iloc[min(self.current_step, self.n_steps - 1)])
@@ -293,12 +407,16 @@ class StockTradingEnv(gym.Env):
 
         total_return = (pv[-1] - pv[0]) / pv[0]
 
+<<<<<<< HEAD
         # Sharpe Ratio (annualized, daily returns)
         rf_daily = (1 + config.backtest.risk_free_rate) ** (1 / 252) - 1
         excess = returns - rf_daily
         sharpe = (
             (excess.mean() / (excess.std() + 1e-9)) * np.sqrt(252)
         )
+=======
+        sharpe = compute_sharpe_from_returns(returns)
+>>>>>>> master
 
         # Max Drawdown
         peak = np.maximum.accumulate(pv)

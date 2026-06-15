@@ -7,7 +7,11 @@ import os
 
 from logger import get_logger
 from config import config
+<<<<<<< HEAD
 from env import StockTradingEnv, HOLD, BUY, SELL
+=======
+from env import StockTradingEnv, HOLD, BUY, SELL, compute_sharpe_from_returns
+>>>>>>> master
 
 logger = get_logger(__name__)
 
@@ -32,7 +36,13 @@ class Backtester:
 
         while not done:
             action, _ = agent.predict(obs, deterministic=deterministic)
+<<<<<<< HEAD
             obs, reward, terminated, truncated, info = self.env.step(int(action))
+=======
+            action = int(np.asarray(action).flatten()[0])
+            action = max(HOLD, min(SELL, action))
+            obs, reward, terminated, truncated, info = self.env.step(action)
+>>>>>>> master
             done = terminated or truncated
             portfolio_values.append(info["portfolio_value"])
             actions_taken.append(int(action))
@@ -190,6 +200,26 @@ class Backtester:
         return results
 
     @staticmethod
+<<<<<<< HEAD
+=======
+    def _daily_portfolio_values(portfolio_values: List[float]) -> np.ndarray:
+        """Downsample intraday equity curve to ~daily points for Sharpe."""
+        pv = np.array(portfolio_values, dtype=float)
+        if len(pv) <= 400:
+            return pv
+        bars_per_day = max(1, round(len(pv) / (252 * 2)))
+        daily = pv[::bars_per_day]
+        return daily if len(daily) >= 2 else pv
+
+    @staticmethod
+    def _compute_sharpe_from_returns(
+        returns: np.ndarray,
+        periods_per_year: int = 252,
+    ) -> float:
+        return compute_sharpe_from_returns(returns, periods_per_year)
+
+    @staticmethod
+>>>>>>> master
     def _compute_metrics(
         portfolio_values: List[float],
         actions: List[int],
@@ -201,12 +231,18 @@ class Backtester:
         if len(pv) < 2:
             return {}
 
+<<<<<<< HEAD
         # Returns
         daily_returns = np.diff(pv) / (pv[:-1] + 1e-9)
+=======
+        daily_pv = Backtester._daily_portfolio_values(portfolio_values)
+        daily_returns = np.diff(daily_pv) / (daily_pv[:-1] + 1e-9)
+>>>>>>> master
 
         # Total Return
         total_return = (pv[-1] - pv[0]) / pv[0]
 
+<<<<<<< HEAD
         # Sharpe Ratio (annualized, 252 trading days)
         rf_daily = (1 + config.backtest.risk_free_rate) ** (1 / 252) - 1
         excess_returns = daily_returns - rf_daily
@@ -219,6 +255,18 @@ class Backtester:
         sortino = (
             (excess_returns.mean() / (downside.std() + 1e-9)) * np.sqrt(252)
             if len(downside) > 0 else 0.0
+=======
+        # Sharpe Ratio (annualized on daily resampled returns)
+        sharpe = Backtester._compute_sharpe_from_returns(daily_returns)
+
+        # Sortino Ratio (only downside deviation)
+        rf_daily = (1 + config.backtest.risk_free_rate) ** (1 / 252) - 1
+        excess_returns = daily_returns - rf_daily
+        downside = excess_returns[excess_returns < 0]
+        sortino = (
+            (excess_returns.mean() / (downside.std() + 1e-9)) * np.sqrt(252)
+            if len(downside) > 0 and downside.std() > 1e-10 else 0.0
+>>>>>>> master
         )
 
         # Max Drawdown
@@ -231,7 +279,11 @@ class Backtester:
 
         # Win Rate (profitable days)
         wins = np.sum(daily_returns > 0)
+<<<<<<< HEAD
         win_rate = wins / len(daily_returns)
+=======
+        win_rate = wins / len(daily_returns) if len(daily_returns) > 0 else 0.0
+>>>>>>> master
 
         # Trade stats
         buy_indices  = [i for i, a in enumerate(actions) if a == BUY]
@@ -256,7 +308,11 @@ class Backtester:
             "profit_factor": float(profit_factor),
             "trade_count": trade_count,
             "final_portfolio": float(pv[-1]),
+<<<<<<< HEAD
             "volatility": float(daily_returns.std() * np.sqrt(252)),
+=======
+            "volatility": float(daily_returns.std() * np.sqrt(252)) if len(daily_returns) > 1 else 0.0,
+>>>>>>> master
             "best_day": float(daily_returns.max()) if len(daily_returns) > 0 else 0.0,
             "worst_day": float(daily_returns.min()) if len(daily_returns) > 0 else 0.0,
         }

@@ -168,9 +168,15 @@ def run_initial_training(args):
             model = train_fn()
             elapsed = time.time() - t0
             trained_models[key] = model
+<<<<<<< HEAD
             logger.info(f"✓ {display_name} trained in {elapsed/60:.1f} minutes")
         except Exception as e:
             logger.error(f"✗ {display_name} training failed: {e}")
+=======
+            logger.info(f"[OK] {display_name} trained in {elapsed/60:.1f} minutes")
+        except Exception as e:
+            logger.error(f"[FAIL] {display_name} training failed: {e}")
+>>>>>>> master
             import traceback
             traceback.print_exc()
 

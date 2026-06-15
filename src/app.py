@@ -607,6 +607,25 @@ def build_candlestick_chart(df: pd.DataFrame) -> go.Figure:
         fig.add_trace(go.Scatter(x=df.index, y=df["ema_26"], name="EMA 26",
                                  line=dict(color="#8b5cf6", width=1.5)), row=1, col=1)
 
+<<<<<<< HEAD
+=======
+    # Bollinger Bands
+    if "bb_high" in df.columns and "bb_low" in df.columns and "bb_mid" in df.columns:
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["bb_high"], name="BB Upper",
+            line=dict(color="#f59e0b", width=1, dash="dot"),
+            opacity=0.7), row=1, col=1)
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["bb_mid"], name="BB Mid",
+            line=dict(color="#f59e0b", width=1, dash="dash"),
+            opacity=0.5), row=1, col=1)
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["bb_low"], name="BB Lower",
+            line=dict(color="#f59e0b", width=1, dash="dot"),
+            fill="tonexty", fillcolor="rgba(245,158,11,0.05)",
+            opacity=0.7), row=1, col=1)
+
+>>>>>>> master
     # Overlay buy/sell signals from prediction history
     predictor = get_live_predictor()
     history = predictor.get_history()

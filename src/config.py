@@ -56,11 +56,25 @@ class SentimentConfig:
 # ─────────────────────────────────────────────
 @dataclass
 class EnvConfig:
+<<<<<<< HEAD
     initial_balance: float = 10_000.0
     transaction_cost: float = 0.001
     overtrading_penalty: float = 0.002
     max_trades_per_episode: int = 10   # ✅ updated
     reward_scaling: float = 1e-4
+=======
+    initial_balance: float = 100_000.0
+    transaction_cost: float = 0.001
+    overtrading_penalty: float = 0.01
+    max_trades_per_episode: int = 50
+    reward_scaling: float = 1.0
+    # Risk-aware composite reward weights (Srivastava et al., arXiv:2506.04358)
+    reward_w_return: float = 0.40
+    reward_w_downside: float = 0.25
+    reward_w_alpha: float = 0.20
+    reward_w_treynor: float = 0.15
+    reward_downside_window: int = 20
+>>>>>>> master
 
 
 # ─────────────────────────────────────────────
@@ -112,7 +126,11 @@ class EnsembleConfig:
 class RiskConfig:
     stop_loss_pct: float = 0.05
     max_drawdown_pct: float = 0.15
+<<<<<<< HEAD
     max_position_pct: float = 0.10
+=======
+    max_position_pct: float = 0.05
+>>>>>>> master
     max_trades_per_day: int = 5
 
 
