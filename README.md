@@ -302,6 +302,20 @@ streamlit run src/app.py
 python src/train_all.py --ticker ^NSEI --retrain
 ```
 
+## Deploy
+
+The simplest deployment path is Streamlit Cloud.
+
+1. Push this repository to GitHub.
+2. Set the app entry file to `app.py` at the repository root.
+3. Keep `requirements.txt` and `runtime.txt` as they are.
+
+If you want to run the same entry point locally, use:
+
+```bash
+streamlit run app.py
+```
+
 ### Quick test run (no GPU needed)
 
 ```bash
